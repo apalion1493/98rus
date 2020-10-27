@@ -391,6 +391,11 @@
     color: #000000;
 }
 
+.calculator-footer__block {
+    display: flex;
+    align-items: center;
+}
+
 @media (max-width: 1024px) {
     .link-list-block__wrapper {
         margin-bottom: 30px;
