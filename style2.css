@@ -1,0 +1,79 @@
+.container-list p {
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+}
+
+.container-list__title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 37px;
+    color: #000000;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.bulleted-list li,
+.numbered-list li {
+    margin-bottom: 10px;
+}
+
+.bulleted-list li:last-child,
+.numbered-list li:last-child {
+    margin-bottom: 0;
+}
+
+.bulleted-list li p,
+.numbered-list li p {
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.container-list__list {
+    margin-top: 25px;
+    padding-left: 25px;
+}
+
+ol.numbered-list { counter-reset: item; }
+ol.numbered-list li { display: flex; }
+ol.numbered-list li:before {
+    content: counter(item) ". ";
+    counter-increment: item;
+    color: #44C868;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+ul.bulleted-list li { display: flex; }
+ul.bulleted-list li:before {
+    content: '';
+    margin-right: 15px;
+    width: 10px;
+    height: 10px;
+    transform: translateY(5px);
+    background: url("bulleted-list__icon.svg") no-repeat center;
+    background-size: 100% auto;
+}
+
+@media (max-width: 1024px) {
+    .bulleted-list li p,
+    .numbered-list li p {
+        font-size: 12px;
+        line-height: normal;
+    }
+
+    .container-list p {
+        font-size: 12px;
+        line-height: normal;
+    }
+
+    ul.bulleted-list li:before {
+        transform: translateY(1px);
+    }
+
+    .container-list__title {
+        font-size: 18px;
+        line-height: normal;
+        margin-bottom: 16px;
+    }
+}
